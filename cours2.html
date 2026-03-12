@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>NOTIONS DE DROIT PENAL 
+ET PROCEDURE PENALE</title>
+</head>
+<body>
+    <h1>NOTIONS DE DROIT PENAL 
+ET PROCEDURE PENALE</h1>
+    <div class="container">
+        <div class="audio-player">
+            <audio id="monAudio" src="audio2.mp3"></audio>
+            
+            <button class="audio-control" onclick="toggleAudio()">
+                <span id="icon">▶️</span> Écouter l'explication
+            </button>
+        </div>
+        <div class="button-container">
+    <a href="cours2.pdf" class="btn" target="_blank">Le Cours en PDF</a>
+    <a href="https://gemini.google.com/share/748ddddc5d0a" class="btn" target="_blank">Quiz d'entraînement</a>
+    <a href="https://gemini.google.com/share/b4c234d4d84d" class="btn" target="_blank">Flash Cards</a>
+    <a href="fiche-cours2.html" class="btn">Fiche de Révision</a>
+    <a href="carte-cours2.html" class="btn">Le cours Shématisé</a>
+    <a href="index.html" class="btn">Retour à l'accueil</a>
+    
+
+        </div>
+    </div>
+</body>
+
+
+<script>
+        const audio = document.getElementById('monAudio');
+        const icon = document.getElementById('icon');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                icon.innerText = "⏸️"; // Change l'icône en pause
+            } else {
+                audio.pause();
+                icon.innerText = "▶️"; // Change l'icône en play
+            }
+        }
+
+        // Remet l'icône Play quand l'audio est fini
+        audio.onended = function() {
+            icon.innerText = "▶️";
+        };
+</script>
